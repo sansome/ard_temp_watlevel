@@ -1,4 +1,13 @@
 # Bekötés - központi arduino
+
+0) INA219
+VCC     →  5V
+GND     →  GND
+SDA     →  A4   (LCD-vel közös I²C busz)
+SCL     →  A5   (LCD-vel közös I²C busz)
+VIN+    →  Akku + (a terhelés felé)
+VIN–    →  Akku + (a forrás felé)
+
 1) Ébresztő gomb
 A membrán gomb két kivezetésű.
 GOMB egyik lába → D2
@@ -53,7 +62,7 @@ A → RS485 kábel A ér
 B → RS485 kábel B ér
 
 A busz két végére (központi + legtávolabbi távoli modulhoz):
-A–B közé: 120 Ω lezáró ellenállás
+A–B közé: 120 Ω lezáró ellenállás (a modul tartalmazza - R7, a középső arduinoról el kell távolítani)
 
 ‼️ Az RS485 buszon csak az A/B vezeték fut, sem 5V, sem egyéb jel nem mehet hosszú távra.
 
